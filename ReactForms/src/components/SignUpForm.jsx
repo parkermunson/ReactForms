@@ -12,6 +12,9 @@ const SignUpForm = ({setToken}) => {
         // setToken(token)
         // console.log("Hello")
 
+        setUsername("")
+        setPassword("")
+
         try {
             const response = await fetch("https://fsa-jwt-practice.herokuapp.com/signup", {
                 method: "POST",
@@ -42,7 +45,7 @@ const SignUpForm = ({setToken}) => {
         </label>
         <br />
         <label>
-            Password: <input value={password} onChange={(event) => setPassword(event.target.value)} />
+            Password: <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
         </label>
         <br />
         <button>
